@@ -1,0 +1,25 @@
+.landing {
+  height: 100vh;
+  position: relative;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .side-a {
+      max-width: 545px;
+      h1 {
+        color: #36536B;
+        margin-bottom: 4rem;
+      }
+      p {
+        font-size: 1.5rem;
+        color: #6C8294;
+        margin-left: 2rem;
+        margin-top: 1.6rem;
+      }
+    }
+    .side-b {
+      z-index: 5;
+    }
+  }
+}

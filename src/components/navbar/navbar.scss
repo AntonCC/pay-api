@@ -1,0 +1,26 @@
+.navbar {
+  position: absolute;
+  width: 100%;
+  .container {
+    padding: 1.6rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .side-a {
+      display: flex;
+      .logo {
+        margin-right: 6rem;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        li {
+          margin-right: 3rem;
+          a {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}

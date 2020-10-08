@@ -1,0 +1,17 @@
+.cta {
+  border: 0;
+  outline: 0;
+  padding: 1rem 3rem;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  &.dark-pink {
+    background: #ba4270;
+    color: #FBFCFE;
+  }
+  &.white-outline {
+    background: none;
+    color: #FBFCFE;
+    border: 2px solid #FBFCFE;
+  }
+}
