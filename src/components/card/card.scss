@@ -1,0 +1,19 @@
+.card {
+  height: 279px;
+  width: 325px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  .icon-bg {
+    height: 106px;
+    width: 106px;
+    background: #36536B;
+    border-radius: 50%;
+    margin-bottom: 3.2rem;
+  }
+  h3 {
+    margin-bottom: 1.6rem;
+  }
+}
