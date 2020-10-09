@@ -1,0 +1,39 @@
+.img-banner {
+  padding: 0 0 5rem 0;;
+  .container {
+    display: flex;
+    // justify-content: flex-end;
+    align-items: center;
+    .side-a {
+      .img-wrapper {
+        margin-left: -55px;
+      }
+      
+    }
+    .side-b {
+      margin: 0 0 0rem 4rem;
+      h2 {
+        color: #36536B;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+// For switchSide
+.img-banner {
+  .container.switch {
+    justify-content: space-between;
+    .side-a {
+      order: 2;
+      .img-wrapper {
+        margin-left: 0;
+        margin-right: -55px;
+      }
+    }
+    .side-b {
+      order: 1;
+      margin: 0 4rem 0 0;
+    }
+  }
+}

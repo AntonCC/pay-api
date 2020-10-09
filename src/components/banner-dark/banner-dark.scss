@@ -1,6 +1,7 @@
 .banner-dark {
   height: 445px;
   background: #1B262F;
+  margin-bottom: 10rem;
   .container {
     display: flex;
     justify-content: space-between;
@@ -17,6 +18,13 @@
     }
     .side-b {
       .brands-container {
+        max-width: 535px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 4rem;
+        // grid-template-rows: repeat(2, 50px);
+        // justify-content: center;
+        // align-items: center;
         svg path {
           fill: #fff;
         }

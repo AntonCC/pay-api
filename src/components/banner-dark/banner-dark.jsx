@@ -21,7 +21,6 @@ const BannerDark = () => {
         </div>
         <div className="side-b">
           <div className="brands-container">
-            <img src={Tesla} alt=""/>
             <Tesla />
             <Microsoft />
             <HP />
