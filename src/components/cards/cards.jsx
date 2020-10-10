@@ -2,13 +2,15 @@ import React from 'react'
 import './cards.scss'
 import Card from '../card/card'
 
-const Cards = () => {
+const Cards = ({ cardInfo }) => {
   return (
     <div className='cards'>
       <div className="container">
-        <Card />
-        <Card />
-        <Card />
+        {
+          cardInfo.map(info => (
+            <Card {...info} />
+          ))
+        }
       </div>
     </div>
   )

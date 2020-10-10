@@ -1,0 +1,39 @@
+footer {
+  background: #1B262F;
+  height: 100px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .side-a {
+      display: flex;
+      .logo {
+        margin-right: 6rem;
+        svg path, svg g {
+          fill: #FBFCFE;
+        }
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        li {
+          margin-right: 3rem;
+          a {
+            font-size: 1.5rem;
+            color: #FBFCFE;
+            opacity: .7;
+          }
+        }
+      }
+    }
+    .side-b {
+      .socials {
+        svg {
+          &:not(:last-child) {
+            margin-right: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

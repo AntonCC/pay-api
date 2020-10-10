@@ -1,7 +1,11 @@
 .pre-footer {
+  margin-bottom: 9.6rem;
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    h2 {
+      color: #36536B;
+    }
   }
 }

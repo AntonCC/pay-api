@@ -5,13 +5,21 @@
   border-radius: 20px;
   font-weight: 700;
   cursor: pointer;
+  transition: all 100ms ease-in;
   &.dark-pink {
     background: #ba4270;
     color: #FBFCFE;
+    &:hover {
+      background: #DA6D97;
+    }
   }
   &.white-outline {
     background: none;
     color: #FBFCFE;
     border: 2px solid #FBFCFE;
+    &:hover {
+      background: #FBFCFE;
+      color: #111;
+    }
   }
 }

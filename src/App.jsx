@@ -2,6 +2,8 @@ import React from 'react';
 import './App.scss';
 import { Route, Switch } from 'react-router-dom'
 import NavBar from './components/navbar/navbar'
+import Prefooter from './components/pre-footer/pre-footer'
+import Footer from './components/footer/footer'
 import Home from './pages/home/home'
 
 const routes = [
@@ -19,6 +21,8 @@ const App = () => {
           ))
         }
       </Switch>
+      <Prefooter />
+      <Footer />
     </div>
   );
 }
