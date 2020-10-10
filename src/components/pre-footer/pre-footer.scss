@@ -9,3 +9,14 @@
     }
   }
 }
+
+@media only screen and (max-width: 925px) {
+  .pre-footer {
+    .container {
+      flex-direction: column;
+      h2 {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
