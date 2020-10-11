@@ -1,7 +1,7 @@
 import React from 'react'
 import './landing.scss'
 import EmailSignUp from '../email-signup/email-signup'
-import { ReactComponent as Phone } from '../../assets/illustration-phone-mockup.svg'
+import Phone from '../../assets/iphone-x.png'
 import Circle from '../../assets/bg-pattern-circle.svg'
 
 const Landing = () => {
@@ -14,7 +14,7 @@ const Landing = () => {
           <p>Have any question? <strong>Contact Us!</strong></p>
         </div>
         <div className="side-b">
-          <Phone />
+          <img src={Phone} alt=""/>
         </div>
       </div>
     </div>

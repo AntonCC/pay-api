@@ -1,5 +1,6 @@
 .banner-dark {
-  height: 445px;
+  // height: 445px;
+  padding: 6.4rem 0;
   background: #1B262F;
   margin-bottom: 10rem;
   .container {
@@ -9,6 +10,7 @@
     .side-a {
       max-width: 465px;
       color: #FBFCFE;
+      margin-right: 4.8rem;
       h2 {
         margin-bottom: 2.4rem;
       }
@@ -28,6 +30,23 @@
         svg path {
           fill: #fff;
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 975px) {
+  .banner-dark {
+    .container {
+      flex-direction: column;
+      .side-a {
+        order: 2;
+        margin-right: 0;
+        text-align: center;
+      }
+      .side-b {
+        order: 1;
+        margin-bottom: 6.4rem;
       }
     }
   }

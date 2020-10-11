@@ -1,17 +1,14 @@
 .img-banner {
-  padding: 0 0 2.5rem 0;;
+  margin: 0 0 10rem 0;;
   .container {
     display: flex;
-    // justify-content: flex-end;
     align-items: center;
+    gap: 10%;
     .side-a {
-      .img-wrapper {
-        margin-left: -55px;
-      }
-      
     }
     .side-b {
       margin: 0 0 0rem 4rem;
+      max-width: 445px;
       h2 {
         color: #36536B;
         margin-bottom: 2rem;
@@ -27,13 +24,37 @@
     .side-a {
       order: 2;
       .img-wrapper {
-        margin-left: 0;
-        margin-right: -55px;
+        margin-right: 0rem;
       }
     }
     .side-b {
       order: 1;
-      margin: 0 4rem 0 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 975px) {
+  .img-banner {
+    .container {
+      flex-direction: column;
+      .side-a {
+        margin-bottom: 4.8rem;
+      }
+      .side-b {
+        text-align: center;
+      }
+    }
+  }
+
+  // For switchSide
+  .img-banner {
+    .container.switch {
+      .side-a {
+        order: 1;
+      }
+      .side-b {
+        order: 2;
+      }
     }
   }
 }

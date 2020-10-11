@@ -1,6 +1,6 @@
 import React from 'react'
-import CodeBlock from '../../assets/illustration-easy-to-implement.svg'
-import PhoneUi from '../../assets/illustration-simple-ui.svg'
+import CodeBlock from '../../assets/code-test.png'
+import PhoneUi from '../../assets/phone-ui.png'
 import {ReactComponent as Finances} from '../../assets/icon-personal-finances.svg'
 import {ReactComponent as Banking} from '../../assets/icon-banking-and-coverage.svg'
 import {ReactComponent as Payments} from '../../assets/icon-consumer-payments.svg'
