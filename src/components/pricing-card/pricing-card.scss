@@ -1,0 +1,36 @@
+.pricing-card {
+  max-width: 350px;
+  h3 {
+    color: #BA4270;
+    margin-bottom: 1.6rem;
+  }
+  p {
+    margin-bottom: .8rem;;
+  }
+  h2 {
+    margin-bottom: 1.2rem;
+  }
+  ul {
+    border-top: 2px solid #dedede;
+    border-bottom: 2px solid #dedede;
+    padding: 1.2rem 0;
+    margin-bottom: 2.4rem;
+    .check {
+      display: flex;
+      align-items: baseline;
+      li {
+        padding-left: 2.4rem;
+      }
+    }
+    li {
+      font-size: 1.6rem;
+      color: #36536B;
+      font-style: italic;
+      margin-bottom: 1.6rem;
+      &.inactive {
+        opacity: .6;
+        padding-left: 3.9rem;
+      }
+    }
+  }
+}

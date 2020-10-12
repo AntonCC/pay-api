@@ -10,10 +10,10 @@ const NavBar = () => {
       <div className="container">
         <div className="side-a">
           <div className="logo">
-            <Logo />
+            <NavLink to='/'><Logo /></NavLink>
           </div>
           <ul>
-            <li><NavLink to='/'>Pricing</NavLink></li>
+            <li><NavLink to='/pricing'>Pricing</NavLink></li>
             <li><NavLink to='/'>About</NavLink></li>
             <li><NavLink to='/'>Contact</NavLink></li>
           </ul>

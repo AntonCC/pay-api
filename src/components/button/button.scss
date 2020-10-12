@@ -22,4 +22,13 @@
       color: #111;
     }
   }
+  &.dark-outline {
+    background: none;
+    color: #36536B;
+    border: 2px solid #36536B;
+    &:hover {
+      background: #36536B;
+      color: #ffffff;
+    }
+  }
 }
