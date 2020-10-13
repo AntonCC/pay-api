@@ -3,29 +3,27 @@ import './pricing-card.scss'
 import Button from '../button/button'
 import {ReactComponent as Check} from '../../assets/icon-check.svg'
 
-const PricingCard = () => {
+const PricingCard = ({ plan, description, price, activePoints, inactivePoints}) => {
   return (
     <div className='pricing-card'>
-      <h3>Free Plan</h3>
-      <p className='italic'>Build and test using our core set of products with up to 100 API requests </p>
-      <h2>$0.00</h2>
+      <h3>{ plan }</h3>
+      <p className='italic'>{ description }</p>
+      <h2>{ price }</h2>
       <ul>
-        <div className="check">
-          <Check />
-          <li>Transactions</li>
-        </div>
-        <div className="check">
-          <Check />
-          <li>Auth</li>
-        </div>
-        <div className="check">
-          <Check />
-          <li>Identity</li>
-        </div>
-        <li className='inactive'>Investments</li>
-        <li className='inactive'>Assets</li>
-        <li className='inactive'>Liabilities</li>
-        <li className='inactive'>Income</li>
+        {
+          activePoints.map(point => (
+            <div className="check">
+              <Check />
+              <li>{ point }</li>
+            </div>
+          ))
+        }
+        {
+          inactivePoints &&
+            inactivePoints.map(point => (
+              <li className='inactive'>{ point }</li>
+            ))
+        }
       </ul>
       <Button btnStyle='dark-outline'>
         Request Access 

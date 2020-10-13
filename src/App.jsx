@@ -6,10 +6,12 @@ import Prefooter from './components/pre-footer/pre-footer'
 import Footer from './components/footer/footer'
 import Home from './pages/home/home'
 import Pricing from './pages/pricing/pricing'
+import About from './pages/about/about'
 
 const routes = [
   {path: '/', name: 'Home', component: Home},
-  {path: '/pricing', name: 'Pricing', component: Pricing}
+  {path: '/pricing', name: 'Pricing', component: Pricing},
+  {path: '/about', name: 'About', component: About}
 ]
 
 const App = () => {

@@ -1,0 +1,17 @@
+.text-point {
+  margin: 5.6rem 0;
+  .container {
+    .small-wrap {
+      max-width: 920px;
+      display: flex;
+      margin: 0 auto;
+      .side-a {
+        margin-right: 9.6rem;
+        h3 {
+          white-space: nowrap;
+          color: #36536B;
+        }
+      }
+    }
+  }
+}
