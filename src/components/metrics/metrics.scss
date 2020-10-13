@@ -1,0 +1,32 @@
+.metrics {
+  margin-bottom: 7.2rem;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    .metric {
+      margin: 0 1rem;
+      padding: 1.6rem;
+      border-top: 1px solid #979797;
+      border-bottom: 1px solid #979797;
+      width: 350px;
+      p {
+        font-size: 16;
+      }
+      h1 {
+        color: #BA4270;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .metrics {
+    .container {
+      .metric {
+        h1 {
+          font-size: 5.6rem;
+        }
+      }
+    }
+  }
+}

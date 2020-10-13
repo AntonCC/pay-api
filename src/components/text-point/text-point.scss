@@ -1,15 +1,20 @@
 .text-point {
-  margin: 5.6rem 0;
+  margin-bottom: 5.6rem;
   .container {
     .small-wrap {
       max-width: 920px;
       display: flex;
       margin: 0 auto;
       .side-a {
-        margin-right: 9.6rem;
         h3 {
           white-space: nowrap;
           color: #36536B;
+          width: 275px;
+        }
+      }
+      .side-b {
+        p {
+          max-width: 635px;
         }
       }
     }

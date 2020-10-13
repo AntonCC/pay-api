@@ -1,9 +1,26 @@
 .page-title {
+  margin-bottom: 10rem;
   .container {
     padding-left: 9.6rem;
     h2 {
       // max-width: 730px;
       color: #36536B;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .page-title {
+    .container {
+      padding-left: 0;
+      .small-wrap {
+        margin: 0 auto;
+        h2 {
+          width: 100%;
+          text-align: center;
+          font-size: 4.8rem;
+        }
+      }
     }
   }
 }
