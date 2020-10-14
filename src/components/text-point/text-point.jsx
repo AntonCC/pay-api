@@ -1,9 +1,9 @@
 import React from 'react'
 import './text-point.scss'
 
-const TextPoint = ({ title, body }) => {
+const TextPoint = ({ title, body, extraSpace }) => {
   return (
-    <div className="text-point">
+    <div className={`text-point ${extraSpace ? 'extra' : ''}`}>
       <div className="container">
         <div className="small-wrap">
           <div className="side-a">

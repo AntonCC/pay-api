@@ -1,5 +1,8 @@
 .text-point {
   margin-bottom: 5.6rem;
+  &.extra {
+    margin-bottom: 10rem;
+  }
   .container {
     .small-wrap {
       max-width: 920px;

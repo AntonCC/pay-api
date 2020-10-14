@@ -1,7 +1,9 @@
 .page-title {
   margin-bottom: 10rem;
   .container {
-    padding-left: 9.6rem;
+    &.extra {
+      padding-left: 9.6rem;
+    }
     h2 {
       // max-width: 730px;
       color: #36536B;

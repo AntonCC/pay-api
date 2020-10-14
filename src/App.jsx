@@ -7,11 +7,13 @@ import Footer from './components/footer/footer'
 import Home from './pages/home/home'
 import Pricing from './pages/pricing/pricing'
 import About from './pages/about/about'
+import Contact from './pages/contact/contact'
 
 const routes = [
   {path: '/', name: 'Home', component: Home},
   {path: '/pricing', name: 'Pricing', component: Pricing},
-  {path: '/about', name: 'About', component: About}
+  {path: '/about', name: 'About', component: About},
+  {path: '/contact', name: 'Contact', component: Contact}
 ]
 
 const App = () => {

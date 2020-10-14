@@ -9,7 +9,9 @@ import Metrics from '../../components/metrics/metrics'
 const About = () => {
   return (
     <div className='about'>
-      <PageTitle title='We empower innovators by delivering access to the financial system'/>
+      <PageTitle extraPadding >
+        We empower innovators by delivering access to the financial system
+      </PageTitle>
       {
         points.map(info => (
           <TextPoint {...info} />

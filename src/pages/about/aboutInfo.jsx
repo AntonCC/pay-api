@@ -16,6 +16,7 @@ export const points2 = [
   },
   {
     title: 'The People',
-    body: "We're all passionate about building a more efficient and inclusive financial infrastructure together. At PayAPI, we have diverse backgrounds and skills."
+    body: "We're all passionate about building a more efficient and inclusive financial infrastructure together. At PayAPI, we have diverse backgrounds and skills.",
+    extraSpace: true
   }
 ]
