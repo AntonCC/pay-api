@@ -1,0 +1,18 @@
+.logos-group {
+  padding-bottom: 12.4rem;
+  h4 {
+    color: #36536B;
+    max-width: 445px;
+    margin-bottom: 4rem;
+    opacity: .8;
+  }
+  .logos {
+    max-width: 535px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4rem;
+    svg path {
+      fill: #36536B;
+    }
+  }
+}

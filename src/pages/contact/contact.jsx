@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <div className='contact'>
       <PageTitle>
-        Submit a help request and we’ll get in touch shortly.
+        Submit a request to schedule a demo, or to send us a message.
       </PageTitle>
       <div className="container">
         <ContactForm />
