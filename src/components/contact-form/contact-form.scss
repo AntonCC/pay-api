@@ -9,6 +9,12 @@
       &.checkbox {
         flex-direction: row;
         justify-content: space-between;
+        .box {
+          background: none;
+          border: none;
+          outline: none;
+          margin-right: 2.6rem;
+        }
       }
       input {
         outline: none;
@@ -48,5 +54,11 @@
     p {
       max-width: 395px;
     }
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .contact-form {
+    margin-right: 0;
   }
 }

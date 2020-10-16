@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './contact.scss'
 import PageTitle from '../../components/page-title/page-title'
 import ContactForm from '../../components/contact-form/contact-form'
 import LogosGroup from '../../components/logos-group/logos-group'
 
-const Contact = () => {
+const Contact = ({ togglePrefooter }) => {
+  useEffect(() => {
+    togglePrefooter(false)
+
+    return () => {
+      togglePrefooter(true)
+    }
+  }, [])
+
   return (
     <div className='contact'>
       <PageTitle>

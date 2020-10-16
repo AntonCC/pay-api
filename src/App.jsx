@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.scss';
 import { Route, Switch } from 'react-router-dom'
 import NavBar from './components/navbar/navbar'
@@ -9,25 +9,35 @@ import Pricing from './pages/pricing/pricing'
 import About from './pages/about/about'
 import Contact from './pages/contact/contact'
 
+const App = () => {
+  const [showPrefooter, setShowPrefooter] = useState(true)
+
+  const togglePrefooter = bool => {
+    setShowPrefooter(bool)
+  }
+
 const routes = [
-  {path: '/', name: 'Home', component: Home},
-  {path: '/pricing', name: 'Pricing', component: Pricing},
-  {path: '/about', name: 'About', component: About},
-  {path: '/contact', name: 'Contact', component: Contact}
+  {path: '/', name: 'Home', component: <Home />},
+  {path: '/pricing', name: 'Pricing', component: <Pricing />},
+  {path: '/about', name: 'About', component: <About />},
+  {path: '/contact', name: 'Contact', component: <Contact togglePrefooter={togglePrefooter}/>}
 ]
 
-const App = () => {
   return (
     <div className="App">
       <NavBar />
       <Switch>
         {
           routes.map(({ path, name, component }) => (
-            <Route key={name} exact path={path} component={component} />
+            <Route key={name} exact path={path} render={() => component} />
           ))
         }
       </Switch>
-      <Prefooter />
+      {
+        showPrefooter 
+          ? <Prefooter />
+          : ''
+      }
       <Footer />
     </div>
   );

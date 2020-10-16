@@ -1,8 +1,17 @@
 .contact {
   padding-top: 12.5rem;
+  min-height: calc(100vh - 242px);
   .container {
     display: flex;
     align-items: center;
     margin-bottom: 9.3rem;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .contact {
+    .container {
+      flex-direction: column;
+    }
   }
 }
