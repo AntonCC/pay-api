@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './contact-form.scss'
-import { useFormikContext, Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Button from '../button/button'
 
 const ContactForm = () => {
@@ -18,9 +18,8 @@ const ContactForm = () => {
   //   setFormDetails({...formDetails, [name]: value})
   // }
 
-  const handleSubmit = e => {
-    e.preventDefault()
-
+  const handleSubmit = (values) => {
+    console.log(values)
   }
 
   return (
@@ -37,7 +36,7 @@ const ContactForm = () => {
           return errors
         }}
         onSubmit={(values, { setSubmitting }) => {
-          console.log('Submit fired!')
+          handleSubmit(values)
         }}
       >
         <Form>

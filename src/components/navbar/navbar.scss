@@ -19,6 +19,10 @@
           margin-right: 3rem;
           a {
             font-size: 1.5rem;
+            opacity: .6;
+            &:hover {
+              opacity: 1;
+            }
           }
         }
       }

@@ -22,6 +22,9 @@ footer {
             font-size: 1.5rem;
             color: #FBFCFE;
             opacity: .7;
+            &:hover {
+              opacity: 1;
+            }
           }
         }
       }
@@ -29,6 +32,11 @@ footer {
     .side-b {
       .socials {
         svg {
+          cursor: pointer;
+          transition: transform 70ms ease-in;
+          &:active {
+            transform: scale(.85);
+          }
           &:not(:last-child) {
             margin-right: 2rem;
           }
