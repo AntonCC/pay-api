@@ -19,9 +19,11 @@ const NavBar = () => {
           </ul>
         </div>
         <div className="side-b">
-          <Button btnStyle='dark-pink'>
-            Schedule a Demo
-          </Button>
+          <NavLink to='/contact'>
+            <Button btnStyle='dark-pink'>
+              Schedule a Demo
+            </Button>
+          </NavLink>
         </div>
       </div>
     </div>

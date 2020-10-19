@@ -13,8 +13,12 @@
 
 @media only screen and (max-width: 1200px) {
   .page-title {
+    margin-bottom: 5.4rem;
     .container {
       padding-left: 0;
+      &.extra {
+        padding-left: 0;
+      }
       .small-wrap {
         margin: 0 auto;
         h2 {

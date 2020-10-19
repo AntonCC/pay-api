@@ -20,5 +20,9 @@
 @media only screen and (max-width: 1050px) {
   .logos-group {
     text-align: center;
+    padding-bottom: 5rem;
+    h4 {
+      margin: 0 auto 4rem auto;
+    }
   }
 }
