@@ -4,19 +4,6 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Button from '../button/button'
 
 const ContactForm = () => {
-  // const [formDetails, setFormDetails] = useState({
-  //   name: '',
-  //   email: '',
-  //   companyName: '',
-  //   title: '',
-  //   message: ''
-  // })
-
-  // const handleChange = e => {
-  //   e.preventDefault()
-  //   const { name, value } = e.target
-  //   setFormDetails({...formDetails, [name]: value})
-  // }
 
   const handleSubmit = (values) => {
     console.log(values)
@@ -53,11 +40,10 @@ const ContactForm = () => {
             <Field type='text' name='title' placeholder='Title' />
           </div>
           <div className="form-group">
-            {/* <textarea cols="30" rows="2" placeholder='Message' required /> */}
             <Field component='textarea' name='message' placeholder='Message' />
           </div>
           <div className="form-group checkbox">
-            <Field type='checkbox' name='signUp' />
+            <Field type='checkbox' name='signUp' className='box' />
             <p className='italic'>Stay up-to-date with company announcements and updates to our API</p>
           </div>
           <Button btnStyle='dark-outline' >

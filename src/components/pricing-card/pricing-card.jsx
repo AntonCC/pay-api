@@ -10,20 +10,22 @@ const PricingCard = ({ plan, description, price, activePoints, inactivePoints}) 
       <p className='italic'>{ description }</p>
       <h2>{ price }</h2>
       <ul>
-        {
-          activePoints.map(point => (
-            <div className="check">
-              <Check />
-              <li>{ point }</li>
-            </div>
-          ))
-        }
-        {
-          inactivePoints &&
-            inactivePoints.map(point => (
-              <li className='inactive'>{ point }</li>
+        <div className="points-wrap">
+          {
+            activePoints.map(point => (
+              <div className="check">
+                <Check />
+                <li>{ point }</li>
+              </div>
             ))
-        }
+          }
+          {
+            inactivePoints &&
+              inactivePoints.map(point => (
+                <li className='inactive'>{ point }</li>
+              ))
+          }
+        </div>
       </ul>
       <Button btnStyle='dark-outline'>
         Request Access 

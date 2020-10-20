@@ -4,8 +4,6 @@
     display: flex;
     align-items: center;
     gap: 10%;
-    .side-a {
-    }
     .side-b {
       margin: 0 0 0rem 4rem;
       max-width: 445px;
@@ -42,6 +40,7 @@
       }
       .side-b {
         text-align: center;
+        margin: 0;
       }
     }
   }

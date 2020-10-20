@@ -8,7 +8,6 @@ const ImgBanner = ({ img, title, body, switchSide}) => {
     <div className='img-banner'>
       <div className={`container ${switchSide ? 'switch' : ''}`}>
         <div className="side-a">
-          {/* { img } */}
           <div className="img-wrapper">
             <img src={ img } alt="code-block"/>
           </div>

@@ -1,5 +1,6 @@
 .pricing-card {
   max-width: 350px;
+  height: 100%;
   h3 {
     color: #BA4270;
     margin-bottom: 1.6rem;
@@ -13,24 +14,44 @@
   ul {
     border-top: 2px solid #dedede;
     border-bottom: 2px solid #dedede;
-    padding: 1.2rem 0;
+    // padding: 1.2rem 0;
     margin-bottom: 2.4rem;
-    .check {
-      display: flex;
-      align-items: baseline;
+    .points-wrap {
+      padding: 1.6rem 0 0 0;
+      .check {
+        display: flex;
+        align-items: baseline;
+        li {
+          padding-left: 2.4rem;
+        }
+      }
       li {
-        padding-left: 2.4rem;
+        font-size: 1.6rem;
+        color: #36536B;
+        font-style: italic;
+        margin-bottom: 1.6rem;
+        &.inactive {
+          opacity: .6;
+          padding-left: 3.9rem;
+        }
       }
     }
-    li {
-      font-size: 1.6rem;
-      color: #36536B;
-      font-style: italic;
-      margin-bottom: 1.6rem;
-      &.inactive {
-        opacity: .6;
-        padding-left: 3.9rem;
-      }
+  }
+}
+
+@media only screen and (max-width: 975px) {
+  .pricing-card {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    h3, p, h2 {
+      text-align: center;
+    }
+    ul {
+    }
+    button {
+      // display: block;
+      // margin: 0 auto;
     }
   }
 }
