@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.scss';
 import { Route, Switch } from 'react-router-dom'
 import NavBar from './components/navbar/navbar'
+import Sidebar from './components/sidebar/sidebar'
 import Prefooter from './components/pre-footer/pre-footer'
 import Footer from './components/footer/footer'
 import Home from './pages/home/home'
@@ -11,9 +12,14 @@ import Contact from './pages/contact/contact'
 
 const App = () => {
   const [showPrefooter, setShowPrefooter] = useState(true)
+  const [showSidebar, setShowSidebar] = useState(false)
 
   const togglePrefooter = bool => {
     setShowPrefooter(bool)
+  }
+
+  const toggleSidebar = bool => {
+    setShowSidebar(bool)
   }
 
 const routes = [
@@ -25,7 +31,8 @@ const routes = [
 
   return (
     <div className="App">
-      <NavBar />
+      <NavBar toggleSidebar={toggleSidebar} />
+      <Sidebar  showSidebar={showSidebar} toggleSidebar={toggleSidebar} />
       <Switch>
         {
           routes.map(({ path, name, component }) => (

@@ -12,7 +12,7 @@
       .logo {
         margin-right: 6rem;
       }
-      ul {
+      .main-nav-items {
         display: flex;
         align-items: center;
         li {
@@ -24,6 +24,32 @@
               opacity: 1;
             }
           }
+        }
+      }
+    }
+    .side-b {
+      .hamburger-wrap {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .navbar {
+    .container {
+      .side-a {
+        .main-nav-items {
+          display: none;
+        }
+      }
+      .side-b {
+        .schedule {
+          display: none;
+        }
+        .hamburger-wrap {
+          display: block;
+          cursor: pointer;
         }
       }
     }

@@ -1,0 +1,13 @@
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 400px;
+    background: black;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 300ms ease-in;
+    &.active {
+        transform: translateX(-100%);
+    }
+}

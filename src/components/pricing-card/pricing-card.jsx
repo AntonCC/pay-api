@@ -8,7 +8,7 @@ const PricingCard = ({ plan, description, price, activePoints, inactivePoints}) 
     <div className='pricing-card'>
       <h3>{ plan }</h3>
       <p className='italic'>{ description }</p>
-      <h2>{ price }</h2>
+      <h2 className='price'>{ price }</h2>
       <ul>
         <div className="points-wrap">
           {
