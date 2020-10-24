@@ -25,7 +25,7 @@ const NavBar = ({ toggleSidebar }) => {
               Schedule a Demo
             </Button>
           </NavLink>
-          <div className="hamburger-wrap" onClick={() => toggleSidebar(true)}>
+          <div className="hamburger-wrap" onClick={() => toggleSidebar()}>
             <Hamburger />
           </div>
         </div>

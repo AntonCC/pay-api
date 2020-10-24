@@ -18,8 +18,8 @@ const App = () => {
     setShowPrefooter(bool)
   }
 
-  const toggleSidebar = bool => {
-    setShowSidebar(bool)
+  const toggleSidebar = () => {
+    setShowSidebar(!showSidebar)
   }
 
 const routes = [
