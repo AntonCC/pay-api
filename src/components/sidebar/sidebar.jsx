@@ -11,15 +11,10 @@ const Sidebar = ({ showSidebar, toggleSidebar }) => {
           <X />
         </div>
         <ul>
-            <li><NavLink to='/pricing'>Pricing</NavLink></li>
-            <li><NavLink to='/about'>About</NavLink></li>
-            <li><NavLink to='contact'>Contact</NavLink></li>
+            <li><NavLink to='/pricing' onClick={toggleSidebar}>Pricing</NavLink></li>
+            <li><NavLink to='/about' onClick={toggleSidebar}>About</NavLink></li>
+            <li><NavLink to='contact' onClick={toggleSidebar}>Contact</NavLink></li>
         </ul>
-        <NavLink className='schedule' to='/contact'>
-            <Button btnStyle='dark-pink'>
-              Schedule a Demo
-            </Button>
-        </NavLink>
     </div>
   )
 }

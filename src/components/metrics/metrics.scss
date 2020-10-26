@@ -30,3 +30,22 @@
     }
   }
 }
+
+@media only screen and (max-width: 705px) {
+  .metrics {
+    .container {
+      flex-direction: column;
+      .metric {
+        width: 100%;
+        text-align: center;
+        border: 0;
+        &:first-child {
+          border-top: 1px solid #979797;
+        }
+        &:last-child {
+          border-bottom: 1px solid #979797;
+        }
+      }
+    }
+  }
+}
