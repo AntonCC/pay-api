@@ -11,7 +11,7 @@ const Landing = () => {
         <div className="side-a">
           <h1>Start Building with our APIs for absolutely free.</h1>
           <EmailSignUp />
-          <p>Have any question? <strong>Contact Us!</strong></p>
+          <p>Have any questions? <strong className='darker'>Contact Us!</strong></p>
         </div>
         <div className="side-b">
           <img src={Phone} alt="phone"/>

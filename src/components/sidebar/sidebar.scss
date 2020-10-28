@@ -1,7 +1,7 @@
 .sidebar {
     position: fixed;
     height: 100%;
-    width: 400px;
+    width: 60%;
     background: #1B262F;
     top: 0;
     right: 0;
@@ -36,5 +36,11 @@
                 opacity: .9;
             }
         }
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    .sidebar {
+        width: 75%;
     }
 }
