@@ -14,7 +14,7 @@ const Landing = () => {
           <p>Have any question? <strong>Contact Us!</strong></p>
         </div>
         <div className="side-b">
-          <img src={Phone} alt=""/>
+          <img src={Phone} alt="phone"/>
         </div>
       </div>
     </div>

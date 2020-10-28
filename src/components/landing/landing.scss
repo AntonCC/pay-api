@@ -50,3 +50,24 @@
     }
   }
 }
+
+@media only screen and (max-width: 510px) {
+  .landing {
+    height: 100vh;
+    .container {
+      .side-a {
+        h1 {
+          font-size: 3.2rem;
+          line-height: 3.6rem;
+          max-width: 80%;
+        }
+      }
+      .side-b {
+        img {
+          height: 240px;
+          width: 155px;
+        }
+      }
+    }
+  }
+}

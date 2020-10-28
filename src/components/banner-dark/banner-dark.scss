@@ -1,5 +1,4 @@
 .banner-dark {
-  // height: 445px;
   padding: 6.4rem 0;
   background: #1B262F;
   margin-bottom: 10rem;
@@ -24,9 +23,6 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 4rem;
-        // grid-template-rows: repeat(2, 50px);
-        // justify-content: center;
-        // align-items: center;
         svg path {
           fill: #fff;
         }
@@ -47,6 +43,23 @@
       .side-b {
         order: 1;
         margin-bottom: 6.4rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .banner-dark {
+    .container {
+      .side-a {
+        h2 {
+          font-size: 3.6rem;
+        }
+      }
+      .side-b {
+        .brands-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
     }
   }
