@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import './contact-form.scss'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Button from '../button/button'
