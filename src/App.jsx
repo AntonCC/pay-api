@@ -33,13 +33,15 @@ const routes = [
     <div className="App">
       <NavBar toggleSidebar={toggleSidebar} />
       <Sidebar  showSidebar={showSidebar} toggleSidebar={toggleSidebar} />
-      <Switch>
-        {
-          routes.map(({ path, name, component }) => (
-            <Route key={name} exact path={path} render={() => component} />
-          ))
-        }
-      </Switch>
+      <div className="app-content">
+        <Switch>
+          {
+            routes.map(({ path, name, component }) => (
+              <Route key={name} exact path={path} render={() => component} />
+            ))
+          }
+        </Switch>
+      </div>
       {
         showPrefooter 
           ? <Prefooter />
