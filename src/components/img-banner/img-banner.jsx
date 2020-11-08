@@ -1,7 +1,5 @@
 import React from 'react'
 import './img-banner.scss'
-// import Test from '../../assets/test-svg.svg'
-import { ReactComponent as Test } from '../../assets/test-svg.svg'
 
 const ImgBanner = ({ img, title, body, switchSide}) => {
   return (

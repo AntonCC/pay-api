@@ -1,6 +1,5 @@
 import React from 'react'
 import './card.scss'
-import { ReactComponent as Finances} from '../../assets/icon-personal-finances.svg'
 
 const Card = ({ img, title, body }) => {
   return (
