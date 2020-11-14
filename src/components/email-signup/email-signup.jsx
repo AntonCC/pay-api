@@ -27,8 +27,8 @@ const EmailSignUp = () => {
         }}
       >
         <Form>
-          <input type="email" placeholder='Enter email address' required />
-          <div className="btn-wrap">
+          <Field type="email" name="email" placeholder="Enter email address" required />
+          <div className="btn-wrap" type="submit">
             <Button btnStyle='dark-pink'>
               Schedule a Demo
             </Button>
