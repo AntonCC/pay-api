@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './App.scss';
 import { Route, Switch } from 'react-router-dom'
+import ScrollTop from './components/scroll-top/scroll-top'
+
 import NavBar from './components/navbar/navbar'
 import Sidebar from './components/sidebar/sidebar'
 import Prefooter from './components/pre-footer/pre-footer'
@@ -31,6 +33,7 @@ const routes = [
 
   return (
     <div className="App">
+      <ScrollTop />
       <NavBar toggleSidebar={toggleSidebar} />
       <Sidebar  showSidebar={showSidebar} toggleSidebar={toggleSidebar} />
       <div className="app-content">

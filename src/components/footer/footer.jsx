@@ -15,9 +15,9 @@ const Footer = () => {
             <Logo />
           </div>
           <ul>
-            <li><NavLink to='/'>Pricing</NavLink></li>
-            <li><NavLink to='/'>About</NavLink></li>
-            <li><NavLink to='/'>Contact</NavLink></li>
+            <li><NavLink to='/pricing'>Pricing</NavLink></li>
+            <li><NavLink to='/about'>About</NavLink></li>
+            <li><NavLink to='/contact'>Contact</NavLink></li>
           </ul>
         </div>
         <div className="side-b">
