@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState  } from 'react'
 import './navbar.scss'
-import { NavLink } from 'react-router-dom'
+import { NavLink, withRouter } from 'react-router-dom'
 import { ReactComponent as Logo } from '../../assets/logo.svg'
 import Button from '../button/button'
 import {ReactComponent as Hamburger} from '../../assets/hamburger.svg'
 
-const NavBar = ({ toggleSidebar }) => {
+const NavBar = ({ history, toggleSidebar }) => {
+  const [inactiveButton, setInactiveButton] = useState(false)
+
+  useEffect(() => {
+    if(history.location.pathname === '/contact') {
+      setInactiveButton(true)
+    } else {
+      setInactiveButton(false)
+    }
+    console.log(inactiveButton)
+  })
+
   return (
     <div className='navbar'>
       <div className="container">
@@ -21,7 +32,7 @@ const NavBar = ({ toggleSidebar }) => {
         </div>
         <div className="side-b">
           <NavLink className='schedule' to='/contact'>
-            <Button btnStyle='dark-pink'>
+            <Button btnStyle='dark-pink' inactiveButton={inactiveButton}>
               Schedule a Demo
             </Button>
           </NavLink>
@@ -33,4 +44,4 @@ const NavBar = ({ toggleSidebar }) => {
     </div>
   )
 }
-export default NavBar
+export default withRouter(NavBar)
