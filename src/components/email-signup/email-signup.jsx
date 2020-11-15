@@ -22,7 +22,7 @@ const EmailSignUp = () => {
           }
           return errors
         }}
-        onSubmit={(values, { setSubmitting }) => {
+        onSubmit={(values, { setSubmitting }) => {  
           handleSubmit(values)
         }}
       >

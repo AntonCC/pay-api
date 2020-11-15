@@ -45,3 +45,30 @@ footer {
     }
   }
 }
+
+@media only screen and (max-width: 675px) {
+  footer {
+    height: 100%;
+    .container {
+      flex-direction: column;
+      .side-a {
+        flex-direction: column;
+        .logo {
+          margin: 4rem auto;
+        }
+        ul {
+          flex-direction: column;
+          li {
+            margin: 0 auto;
+            margin-bottom: 3.1rem;
+          }
+        }
+      }
+      .side-b {
+        .socials {
+          margin-bottom: 4rem;
+        }
+      }
+    }
+  }
+}
