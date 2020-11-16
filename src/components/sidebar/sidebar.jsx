@@ -15,6 +15,9 @@ const Sidebar = ({ showSidebar, toggleSidebar }) => {
             <li><NavLink to='/about' onClick={toggleSidebar}>About</NavLink></li>
             <li><NavLink to='contact' onClick={toggleSidebar}>Contact</NavLink></li>
         </ul>
+        <Button btnStyle='dark-pink' handleClick={toggleSidebar}>
+          Schedule a Demo
+        </Button>
     </div>
   )
 }

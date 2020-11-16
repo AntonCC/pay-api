@@ -14,7 +14,6 @@ const NavBar = ({ history, toggleSidebar }) => {
     } else {
       setInactiveButton(false)
     }
-    console.log(inactiveButton)
   })
 
   return (
