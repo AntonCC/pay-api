@@ -4,8 +4,9 @@ import Button from '../button/button'
 import { Formik, Form, Field } from 'formik'
 
 const EmailSignUp = () => {
-  const handleSubmit = values => {
+  const handleSubmit = (values, setSubmitting, resetForm) => {
     console.log(values)
+    resetForm()
   }
 
 
@@ -22,13 +23,13 @@ const EmailSignUp = () => {
           }
           return errors
         }}
-        onSubmit={(values, { setSubmitting }) => {  
-          handleSubmit(values)
+        onSubmit={(values, { setSubmitting, resetForm }) => {  
+          handleSubmit(values, setSubmitting, resetForm)
         }}
       >
         <Form>
           <Field type="email" name="email" placeholder="Enter email address" required />
-          <div className="btn-wrap" type="submit">
+          <div className="btn-wrap">
             <Button btnStyle='dark-pink'>
               Schedule a Demo
             </Button>

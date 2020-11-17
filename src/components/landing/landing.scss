@@ -3,6 +3,16 @@
   min-height: 680px;
   max-height: 900px;
   position: relative;
+  overflow: hidden;
+  .circle-wrap {
+    position: absolute;
+    right: -150px;
+    top: -250px;
+    svg {
+      height: 1000px;
+      width: 1000px;
+    }
+  }
   .container {
     display: flex;
     justify-content: space-between;
