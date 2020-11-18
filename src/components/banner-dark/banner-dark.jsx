@@ -7,11 +7,15 @@ import { ReactComponent as HP } from '../../assets/hewlett-packard.svg'
 import { ReactComponent as Oracle } from '../../assets/oracle.svg'
 import { ReactComponent as Google } from '../../assets/google.svg'
 import { ReactComponent as Nvidia } from '../../assets/nvidia.svg'
+import { ReactComponent as Circle } from '../../assets/bg-circle.svg'
 
 const BannerDark = () => {
   return (
     <div className='banner-dark'>
       <div className="container">
+        <div className="banner-dark-circle">
+          <Circle />
+        </div>
         <div className="side-a">
           <h2 className="small">Who we work with</h2>
           <p className='italic'>Today, millions of people around the world have successfully connected their accounts to apps they love using our API. We provide developers with the tools they need to create easy and accessible experiences for their users. </p>

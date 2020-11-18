@@ -4,6 +4,7 @@ import PhoneUi from '../../assets/phone-ui.png'
 import {ReactComponent as Finances} from '../../assets/icon-personal-finances.svg'
 import {ReactComponent as Banking} from '../../assets/icon-banking-and-coverage.svg'
 import {ReactComponent as Payments} from '../../assets/icon-consumer-payments.svg'
+// import {ReactComponent as Circle} from '../../assets/bg-circle.svg'
 
 export const imgBannerInfo = [
   {
@@ -15,7 +16,8 @@ export const imgBannerInfo = [
     img: PhoneUi,
     title: 'Simple UI & UX',
     body: 'Our pre-built form is easy to integrate in your app or website’s checkout flow and designed to optimize conversion.',
-    switchSide: true
+    switchSide: true,
+    svgCircle: true
   }
 ]
 
