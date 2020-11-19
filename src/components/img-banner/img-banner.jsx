@@ -15,15 +15,6 @@ const ImgBanner = ({ img, title, body, switchSide, svgCircle}) => {
           <h2>{ title }</h2>
           <p className='italic'>{ body }</p>
         </div>
-        {/* {
-          svgCircle
-            ? (
-                <div className="img-banner-circle">
-                  <Circle />
-                </div> 
-              )
-            : ''
-        } */}
         {
           svgCircle && (
             <div className="img-banner-circle">

@@ -48,6 +48,10 @@
     .container {
       flex-direction: column;
       justify-content: center;
+      .landing-circle {
+        top: -725px;
+        right: calc(50% - 500px);
+      }
       .side-a {
         order: 2;
         text-align: center;

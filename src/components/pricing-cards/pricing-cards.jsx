@@ -1,6 +1,7 @@
 import React from 'react'
 import './pricing-cards.scss'
 import PricingCard from '../pricing-card/pricing-card'
+import {ReactComponent as Circle} from '../../assets/bg-circle.svg'
 
 const PricingCards = ({ cardInfo }) => {
   return (

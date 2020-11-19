@@ -7,6 +7,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    .nav-circle {
+      position: absolute;
+      top: -550px;
+      right: -300px;
+      z-index: -5;
+    }
     .side-a {
       display: flex;
       .logo {

@@ -4,9 +4,11 @@ import { NavLink, withRouter } from 'react-router-dom'
 import { ReactComponent as Logo } from '../../assets/logo.svg'
 import Button from '../button/button'
 import {ReactComponent as Hamburger} from '../../assets/hamburger.svg'
+import {ReactComponent as Circle} from '../../assets/bg-circle.svg'
 
 const NavBar = ({ history, toggleSidebar }) => {
   const [inactiveButton, setInactiveButton] = useState(false)
+  const [showCircle, setShowCircle] = useState(false)
 
   useEffect(() => {
     if(history.location.pathname === '/contact') {
@@ -14,11 +16,24 @@ const NavBar = ({ history, toggleSidebar }) => {
     } else {
       setInactiveButton(false)
     }
+
+    if(history.location.pathname !== '/') {
+      setShowCircle(true)
+    } else {
+      setShowCircle(false)
+    }
   })
 
   return (
     <div className='navbar'>
       <div className="container">
+        {
+          showCircle && (
+            <div className="nav-circle">
+              <Circle />
+            </div>
+          )
+        }
         <div className="side-a">
           <div className="logo">
             <NavLink to='/'><Logo /></NavLink>
