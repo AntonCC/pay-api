@@ -45,6 +45,10 @@
 @media only screen and (max-width: 770px) {
   .navbar {
     .container {
+      .nav-circle {
+        right: -500px;
+        top: -600px;
+      }
       .side-a {
         .main-nav-items {
           display: none;

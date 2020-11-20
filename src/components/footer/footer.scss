@@ -1,10 +1,17 @@
 footer {
   background: #1B262F;
   height: 100px;
+  overflow: hidden;
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    .footer-circle {
+      position: absolute;
+      top: 150px;
+      right: calc(50% - 390px);
+    }
     .side-a {
       display: flex;
       .logo {
