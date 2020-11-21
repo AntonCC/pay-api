@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import './img-banner.scss'
+import { WidthContext } from '../../contexts/widthContext'
 import {ReactComponent as Circle} from '../../assets/bg-circle.svg'
 
 const ImgBanner = ({ img, title, body, switchSide, svgCircle}) => {
+  const [width, setWidth] = useContext(WidthContext)
+  const [renderSVG, setRenderSVG] = useState()
+
+  useEffect(() => {
+    if(width <= 975) {
+      setRenderSVG(false)
+    } else {
+      setRenderSVG(true)
+    }
+  }, [width])
+
   return (
     <div className='img-banner'>
       <div className={`container ${switchSide ? 'switch' : ''}`}>
@@ -16,7 +28,7 @@ const ImgBanner = ({ img, title, body, switchSide, svgCircle}) => {
           <p className='italic'>{ body }</p>
         </div>
         {
-          svgCircle && (
+          svgCircle && renderSVG && (
             <div className="img-banner-circle">
               <Circle />
             </div>

@@ -12,6 +12,7 @@
       position: absolute;
       top: -450px;
       left: -250px;
+      // right: calc(50% - 390px);
       svg {
         height: 780px;
         width: 780px;
@@ -48,6 +49,10 @@
   .banner-dark {
     .container {
       flex-direction: column;
+      .banner-dark-circle {
+        top: -600px;
+        left: unset;
+      }
       .side-a {
         order: 2;
         margin-right: 0;
