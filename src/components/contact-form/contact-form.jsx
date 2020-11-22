@@ -1,56 +1,53 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './contact-form.scss'
-import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Button from '../button/button'
 
 const ContactForm = () => {
+  const [formDetails, setFormDetails] = useState({
+    name: '',
+    email: '',
+    companyName: '',
+    title: '',
+    message: '',
+    signUp: false
+  })
 
-  const handleSubmit = (values) => {
-    console.log(values)
+  const handleChange = e => {
+    const { name, value } = e.target
+    setFormDetails({ ...formDetails, [name]: value })
+    console.log(formDetails)
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
   }
 
   return (
     <div className='contact-form'>
-      <Formik
-        initialValues={{ name: '', email: '', companyName: '', title: '', message: '', signUp: false}}
-        validate={values => {
-          const errors = {}
-          if(!values.email) {
-            errors.email = 'Required'
-          } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
-            errors.email = 'Invalid email address'
-          }
-          return errors
-        }}
-        onSubmit={(values, { setSubmitting }) => {
-          handleSubmit(values)
-        }}
-      >
-        <Form>
-          <div className="form-group">
-            <Field type='text' name='name' placeholder='Name' />
-          </div>
-          <div className="form-group">
-            <Field type='email' name='email' placeholder='Email' />
-          </div>
-          <div className="form-group">
-            <Field type='text' name='companyName' placeholder='Company Name' />
-          </div>
-          <div className="form-group">
-            <Field type='text' name='title' placeholder='Title' />
-          </div>
-          <div className="form-group">
-            <Field component='textarea' name='message' placeholder='Message' />
-          </div>
-          <div className="form-group checkbox">
-            <Field type='checkbox' name='signUp' className='box' />
-            <p className='italic'>Stay up-to-date with company announcements and updates to our API</p>
-          </div>
-          <Button btnStyle='dark-outline' >
-            Submit
-          </Button>
-        </Form>
-      </Formik>
+      <form>
+        <div className="form-group">
+          <input type='text' name='name' placeholder='Name' handleChange={handleChange} required />
+        </div>
+        <div className="form-group">
+          <input type='email' name='email' placeholder='Email' handleChange={handleChange} required />
+        </div>
+        <div className="form-group">
+          <input type='text' name='companyName' placeholder='Company Name' handleChange={handleChange} />
+        </div>
+        <div className="form-group">
+          <input type="text" name='title' placeholder='Title' handleChange={handleChange} />
+        </div>
+        <div className="form-group">
+          <textarea name='message' placeholder='Message' handleChange={handleChange} />
+        </div>
+        <div className="form-group checkbox">
+          <input type='checkbox' name='signUp' className='box' handleChange={handleChange} />
+          <p className='italic'>Stay up-to-date with company announcments and updates to our API</p>
+        </div>
+        <Button btnStyle='dark-outline'>
+          Submit
+        </Button>
+      </form>
     </div>
   )
 }
