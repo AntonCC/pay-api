@@ -14,6 +14,7 @@ footer {
     }
     .side-a {
       display: flex;
+      z-index: 5;
       .logo {
         margin-right: 6rem;
         svg path, svg g {
@@ -37,6 +38,7 @@ footer {
       }
     }
     .side-b {
+      z-index: 5;
       .socials {
         svg {
           cursor: pointer;

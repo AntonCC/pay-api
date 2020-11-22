@@ -1,7 +1,7 @@
 import React from 'react'
 import './sidebar.scss'
 import { NavLink } from 'react-router-dom'
-import { ReactComponent as X } from '../../assets/times-solid.svg'
+import { ReactComponent as X } from '../../assets/exit-x.svg'
 import Button from '../button/button'
 
 const Sidebar = ({ showSidebar, toggleSidebar }) => {
