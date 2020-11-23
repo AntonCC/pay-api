@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import './contact-form.scss'
 import Button from '../button/button'
 
@@ -11,15 +11,16 @@ const ContactForm = () => {
     message: '',
     signUp: false
   })
+  const formEl = useRef(null)
 
   const handleChange = e => {
     const { name, value } = e.target
     setFormDetails({ ...formDetails, [name]: value })
-    console.log(formDetails)
   }
 
   const handleSubmit = e => {
     e.preventDefault()
+    formEl.current.reset()
   }
 
   return (
