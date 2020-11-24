@@ -1,33 +1,44 @@
-import React, { useState, useRef } from 'react'
+import React from 'react'
 import './email-signup.scss'
 import Button from '../button/button'
+import { Formik, Form, Field, ErrorMessage } from 'formik'
+import * as Yup from 'yup'
 
 const EmailSignUp = () => {
-  const [userEmail, setUserEmail] = useState('')
-  const formEl = useRef(null)
-
-  const handleChange = e => {
-    const { value } = e.target
-    setUserEmail(value)
-  }
-
-  const handleSubmit = e => {
-    e.preventDefault()
-    alert('Thanks for registering!')
-    formEl.current.reset()
-  }
-
+  const SignUpSchema = Yup.object().shape({
+    email: Yup.string().email('Invalid email').required('Email is required')
+  })
 
   return (
     <div className='email-signup'>
-      <form onSubmit={handleSubmit} ref={formEl}>
-        <input type="email" name="email" placeholder="Enter email address" onChange={handleChange} required/>
-        <div className="btn-wrap">
-          <Button btnStyle='dark-pink'>
-            Schedule a Demo
-          </Button>
-        </div>
-      </form>
+      <Formik
+        initialValues={{ email: '' }}
+        validationSchema={SignUpSchema}
+        onSubmit={(values, { resetForm }) => {
+          console.log(values)
+          resetForm()
+          alert('Thank you for signing up!')
+        }}
+      >
+        {({ errors, touched}) => (
+          <Form>
+            <div className="form-group">
+              <Field name='email' placeholder='Enter email address' />
+              {errors.email && touched.email ? (
+                <div className='form-error'>
+                  {errors.email}
+                </div>
+              ) : null}
+            {/* <ErrorMessage name='email' /> */}
+            </div>
+            <div className="btn-wrap">
+              <Button btnStyle='dark-pink'  >
+                Schedule a Demo
+              </Button>
+            </div>
+          </Form>
+        )}
+      </Formik>
     </div>
   )
 }
