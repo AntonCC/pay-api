@@ -6,7 +6,7 @@ import * as Yup from 'yup'
 
 const EmailSignUp = () => {
   const SignUpSchema = Yup.object().shape({
-    email: Yup.string().email('Invalid email').required('Email is required')
+    email: Yup.string().trim().email('* Invalid email').required('* Email is required')
   })
 
   return (
@@ -14,7 +14,15 @@ const EmailSignUp = () => {
       <Formik
         initialValues={{ email: '' }}
         validationSchema={SignUpSchema}
+        validateOnChange={false}
+        validateOnBlur={false}
         onSubmit={(values, { resetForm }) => {
+          // remove leading and trailing whitespace, Formik grabs original values even with Yup.trim()
+          for(const value in values) {
+            if(typeof values[value] === 'string') {
+              values[value] = values[value].trim()
+            }
+          }
           console.log(values)
           resetForm()
           alert('Thank you for signing up!')

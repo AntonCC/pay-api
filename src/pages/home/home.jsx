@@ -1,5 +1,6 @@
 import React from 'react'
 import './home.scss'
+import uniqid from 'uniqid'
 import { imgBannerInfo, cardInfo } from './homeInfo'
 import Landing from '../../components/landing/landing'
 import BannerDark from '../../components/banner-dark/banner-dark'
@@ -13,7 +14,7 @@ const Home = () => {
       <BannerDark />
       {
         imgBannerInfo.map(info => (
-          <ImgBanner {...info} />
+          <ImgBanner key={uniqid()} {...info} />
         ))
       }
       <Cards cardInfo={cardInfo} />

@@ -6,11 +6,11 @@ import * as Yup from 'yup'
 
 const ContactForm = () => {
   const ContactSchema = Yup.object().shape({
-    name: Yup.string().max(30).required("This field can't be empty"),
-    email: Yup.string().email('Invalid email').required("This field can't be empty"),
+    name: Yup.string().max(30).required("* This field can't be empty"),
+    email: Yup.string().email('Invalid email').required("* This field can't be empty"),
     companyName: Yup.string().max(30),
     title: Yup.string().max(15),
-    message: Yup.string().max(500).required("This field can't be empty"),
+    message: Yup.string().max(500).required("* This field can't be empty*"),
     signUp: Yup.boolean()
   })
 
@@ -19,28 +19,47 @@ const ContactForm = () => {
       <Formik
         initialValues={{ name: '', email: '', companyName: '', title: '', message: '', signUp: false}}
         validationSchema={ContactSchema}
+        onSubmit={(values, { resetForm }) => {
+          // remove leading and trailing whitespace, Formik grabs original values even with Yup.trim()
+          for(const value in values) {
+            if(typeof values[value] === 'string') {
+              values[value] = values[value].trim()
+            }
+          }
+          resetForm()
+        }}
       >
         {({ errors, touched }) => (
           <Form>
             <div className="form-group">
               <Field name='name' placeholder='Name' />
-              <ErrorMessage name='name' />
+              <ErrorMessage name='name'>
+                {msg => <div className='contact-error'>{ msg }</div>}
+              </ErrorMessage>
             </div>
             <div className="form-group">
               <Field name='email' placeholder='Email' />
-              <ErrorMessage name='name' />
+              <ErrorMessage name='email'>
+                {msg => <div className='contact-error'>{ msg }</div>}
+              </ErrorMessage>
             </div>
             <div className="form-group">
               <Field name='companyName' placeholder='Company Name' />
-              <ErrorMessage name='name' />
+              <ErrorMessage name='companyName'>
+                {msg => <div className='contact-error'>{ msg }</div>}
+              </ErrorMessage>
             </div>
             <div className="form-group">
               <Field name='title' placeholder='Title' />
-              <ErrorMessage name='name' />
+              <ErrorMessage name='title'>
+                {msg => <div className='contact-error'>{ msg }</div>}
+              </ErrorMessage>
             </div>
             <div className="form-group">
               <Field name='message' placeholder='Message' />
-              <ErrorMessage name='name' />
+              <ErrorMessage name='message'>
+                {msg => <div className='contact-error'>{ msg }</div>}
+              </ErrorMessage>
             </div>
             <div className="form-group checkbox">
               <Field name='signUp' type='checkbox' className='box' />

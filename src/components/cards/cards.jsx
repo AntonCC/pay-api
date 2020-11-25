@@ -1,5 +1,6 @@
 import React from 'react'
 import './cards.scss'
+import uniqid from 'uniqid'
 import Card from '../card/card'
 
 const Cards = ({ cardInfo }) => {
@@ -8,7 +9,7 @@ const Cards = ({ cardInfo }) => {
       <div className="container">
         {
           cardInfo.map(info => (
-            <Card {...info} />
+            <Card key={uniqid()} {...info} />
           ))
         }
       </div>

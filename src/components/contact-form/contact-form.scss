@@ -6,6 +6,12 @@
       display: flex;
       flex-direction: column;
       margin-bottom: 2.4rem;
+      .contact-error {
+        color: red;
+        font-size: 1.1rem;
+        font-style: italic;
+        opacity: .8;
+      }
       &.checkbox {
         flex-direction: row;
         justify-content: space-between;
