@@ -21,6 +21,21 @@
           border: none;
           outline: none;
           margin-right: 2.6rem;
+          cursor: pointer;
+        }
+        label {
+          position: relative;
+          font-size: 1.5rem;
+          line-height: 28px;
+          opacity: .6;
+          max-width: 395px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          &.italic {
+            font-style: italic;
+          }
         }
       }
       input {
@@ -57,9 +72,6 @@
           padding: 1.2rem;
         }
       }
-    }
-    p {
-      max-width: 395px;
     }
   }
 }

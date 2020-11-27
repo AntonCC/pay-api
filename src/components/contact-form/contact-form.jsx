@@ -6,11 +6,11 @@ import * as Yup from 'yup'
 
 const ContactForm = () => {
   const ContactSchema = Yup.object().shape({
-    name: Yup.string().max(30).required("* This field can't be empty"),
-    email: Yup.string().email('Invalid email').required("* This field can't be empty"),
-    companyName: Yup.string().max(30),
-    title: Yup.string().max(15),
-    message: Yup.string().max(500).required("* This field can't be empty*"),
+    name: Yup.string().trim().max(30).required("* This field can't be empty"),
+    email: Yup.string().trim().email('* Invalid email').required("* This field can't be empty"),
+    companyName: Yup.string().trim().max(30, "* This field can't exceed 30 characters"),
+    title: Yup.string().trim().max(15, "* This field can't exceed 15 characters"),
+    message: Yup.string().trim().max(500).required("* This field can't be empty"),
     signUp: Yup.boolean()
   })
 
@@ -63,7 +63,7 @@ const ContactForm = () => {
             </div>
             <div className="form-group checkbox">
               <Field name='signUp' type='checkbox' className='box' />
-              <p className='italic'>Stay up-to-date with company announcments and updates to our API</p>
+              <label className='italic'>Stay label-to-date with company announcments and updates to our API</label>
             </div>
             <Button btnStyle='dark-outline'>
               Submit
