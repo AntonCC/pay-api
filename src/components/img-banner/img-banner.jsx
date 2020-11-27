@@ -4,7 +4,7 @@ import { WidthContext } from '../../contexts/widthContext'
 import {ReactComponent as Circle} from '../../assets/bg-circle.svg'
 
 const ImgBanner = ({ img, title, body, switchSide, svgCircle}) => {
-  const [width, setWidth] = useContext(WidthContext)
+  const [width] = useContext(WidthContext)
   const [renderSVG, setRenderSVG] = useState()
 
   useEffect(() => {

@@ -1,7 +1,7 @@
 import React from 'react'
 import './email-signup.scss'
 import Button from '../button/button'
-import { Formik, Form, Field, ErrorMessage } from 'formik'
+import { Formik, Form, Field } from 'formik'
 import * as Yup from 'yup'
 
 const EmailSignUp = () => {

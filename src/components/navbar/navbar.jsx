@@ -22,7 +22,7 @@ const NavBar = ({ history, toggleSidebar }) => {
     } else {
       setShowCircle(false)
     }
-  })
+  }, [history.location.pathname])
 
   return (
     <div className='navbar'>
@@ -39,9 +39,9 @@ const NavBar = ({ history, toggleSidebar }) => {
             <NavLink to='/'><Logo /></NavLink>
           </div>
           <ul className='main-nav-items'>
-            <li><NavLink to='/pricing'>Pricing</NavLink></li>
-            <li><NavLink to='/about'>About</NavLink></li>
-            <li><NavLink to='/contact'>Contact</NavLink></li>
+            <li><NavLink tag={NavLink} activeClassName='active' to='/pricing'>Pricing</NavLink></li>
+            <li><NavLink tag={NavLink} activeClassName='active' to='/about'>About</NavLink></li>
+            <li><NavLink tag={NavLink} activeClassName='active' to='/contact'>Contact</NavLink></li>
           </ul>
         </div>
         <div className="side-b">

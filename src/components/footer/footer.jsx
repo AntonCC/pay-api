@@ -9,7 +9,7 @@ import {ReactComponent as LinkedIn} from '../../assets/linkedin.svg'
 import {ReactComponent as Circle} from '../../assets/bg-circle.svg'
 
 const Footer = () => {
-  const [width, setWidth] = useContext(WidthContext)
+  const [width] = useContext(WidthContext)
   const [renderSVG, setRenderSVG] = useState(false)
 
   useEffect(() => {
@@ -30,9 +30,11 @@ const Footer = () => {
             </div>
         }
         <div className="side-a">
-          <div className="logo">
-            <Logo />
-          </div>
+          <NavLink to='/'>
+            <div className="logo">
+              <Logo />
+            </div>
+          </NavLink>
           <ul>
             <li><NavLink to='/pricing'>Pricing</NavLink></li>
             <li><NavLink to='/about'>About</NavLink></li>

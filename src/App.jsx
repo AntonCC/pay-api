@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from 'react';
 import { WidthContext } from './contexts/widthContext'
 import './App.scss';
 import { Route, Switch } from 'react-router-dom'
-import { WidthProvider } from './contexts/widthContext'
 import debounce from './helperFuncs/debounce'
 import ScrollTop from './components/scroll-top/scroll-top'
 

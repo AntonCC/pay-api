@@ -2,7 +2,6 @@ import React from 'react'
 import './sidebar.scss'
 import { NavLink } from 'react-router-dom'
 import { ReactComponent as X } from '../../assets/exit-x.svg'
-import Button from '../button/button'
 
 const Sidebar = ({ showSidebar, toggleSidebar }) => {
   return (
@@ -12,13 +11,11 @@ const Sidebar = ({ showSidebar, toggleSidebar }) => {
       </div>
       <div className='line-break'></div>
       <ul>
-        <li><NavLink to='/pricing' onClick={toggleSidebar}>Pricing</NavLink></li>
-        <li><NavLink to='/about' onClick={toggleSidebar}>About</NavLink></li>
-        <li><NavLink to='contact' onClick={toggleSidebar}>Contact</NavLink></li>
+        <li><NavLink tag={NavLink} activeClassName='active' exact to='/' onClick={toggleSidebar}>Home</NavLink></li>
+        <li><NavLink tag={NavLink} activeClassName='active' to='/pricing' onClick={toggleSidebar}>Pricing</NavLink></li>
+        <li><NavLink tag={NavLink} activeClassName='active' to='/about' onClick={toggleSidebar}>About</NavLink></li>
+        <li><NavLink tag={NavLink} activeClassName='active' to='contact' onClick={toggleSidebar}>Contact</NavLink></li>
       </ul>
-      <Button btnStyle='dark-pink' handleClick={toggleSidebar}>
-        Schedule a Demo
-        </Button>
     </div>
   )
 }
