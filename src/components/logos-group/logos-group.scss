@@ -31,6 +31,10 @@
   .logos-group {
     .logos {
       grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      svg {
+        transform: scale(.75);
+      }
     }
   }
 }

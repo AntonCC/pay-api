@@ -27,9 +27,10 @@ const ContactForm = () => {
             }
           }
           resetForm()
+          alert('Thank you for reaching out! We will get back to you ASAP.')
         }}
       >
-        {({ errors, touched }) => (
+        {() => (
           <Form>
             <div className="form-group">
               <Field name='name' placeholder='Name' />

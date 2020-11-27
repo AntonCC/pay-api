@@ -1,5 +1,5 @@
 .pricing-cards {
-  margin-bottom: 7.2rem;
+  margin-bottom: 9.6rem;
   .container {
     .title {
       margin-bottom: 7.2rem;
@@ -26,6 +26,7 @@
 
 @media only screen and (max-width: 750px) {
   .pricing-cards {
+    margin-bottom: 8rem;
     .container {
       .card-wrap {
         flex-direction: column;
