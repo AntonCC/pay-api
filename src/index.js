@@ -6,7 +6,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { WidthProvider } from './contexts/widthContext'
 
 ReactDOM.render(
-  <Router basename='/payapi'>
+  <Router basename='/pay-api'>
     <React.StrictMode>
       <WidthProvider>
         <App />
