@@ -64,7 +64,7 @@ const ContactForm = () => {
             </div>
             <div className="form-group checkbox">
               <Field name='signUp' type='checkbox' className='box' />
-              <label className='italic'>Stay label-to-date with company announcments and updates to our API</label>
+              <label className='italic'>Stay up-to-date with company announcments and updates to our API</label>
             </div>
             <Button btnStyle='dark-outline'>
               Submit
